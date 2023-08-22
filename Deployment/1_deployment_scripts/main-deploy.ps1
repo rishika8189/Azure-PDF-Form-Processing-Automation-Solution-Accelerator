@@ -192,7 +192,7 @@ Write-Host "'$logicAppOutlookName' and '$logicAppFormProcName' are deployed. `r`
 Write-Host "Deploy Code for Azure Functions App '$azureFunctionsAppName' `r`n" -ForegroundColor Yellow
 $scriptPath = Split-Path $MyInvocation.MyCommand.Path -Parent
 $parentPath = Split-Path -parent $scriptPath
-$codePath = Join-Path -Path $parentPath -ChildPath 'code'
+$codePath = Join-Path -Path $parentPath -ChildPath 'Code'
 Set-Location -Path $codePath
 # Publish code to Azure Functions App from the code folder
 func azure functionapp publish $azureFunctionsAppName --python 
